@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Asko</title>
+ <link href="https://soulyi.io/atom.xml" rel="self"/>
+ <link href="https://soulyi.io/"/>
+ <updated>2021-06-11T04:16:51+00:00</updated>
+ <id>https://soulyi.io</id>
+ <author>
+   <name></name>
+   <email>alus20x@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>기술 문서 번역하기</title>
+   <link href="https://soulyi.io/2021/04/17/how-to-translate"/>
+   <updated>2021-04-17T00:00:00+00:00</updated>
+   <id>https://soulyi.io/2021/04/17/how-to-translate</id>
+   <content type="html">&lt;p&gt;저는 다양한 기술 문서들과, 유튜브 영상들을 취미로 번역해 오고 있었습니다. 하지만 최근 uBlock Origin의 문서를 번역하던중, 체계적인 틀이 존재하지 않는것 같아서 이번 기회에 정리해보게 되었습니다.&lt;/p&gt;
+
+&lt;p&gt;작년 hacktoberfest seoul에서 이보라님께서 발표해주신 &lt;a href=&quot;https://www.youtube.com/watch?v=K_al26a9R0c&quot;&gt;세션 4: 다르지만 같은 번역 리뷰, 코드 리뷰 (이보라)
+&lt;/a&gt; 를 중심으로 내용을 작성했습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;번역-원칙&quot;&gt;번역 원칙&lt;/h2&gt;
+
+&lt;p&gt;제가 번역을 진행하면서 생각한 점들을 정리해 보았습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;유동적-번역&quot;&gt;유동적 번역&lt;/h3&gt;
+&lt;p&gt;번역체 어투를 피하기 위해선, 영어 그대로가 아닌, &lt;em&gt;한국어로 글을 쓴다&lt;/em&gt; 라는 생각을 갖고 새로 작성하는것처럼 생각해야 합니다&lt;/p&gt;
+
+&lt;h3 id=&quot;뜻을-살리는-번역&quot;&gt;뜻을 살리는 번역&lt;/h3&gt;
+&lt;p&gt;위의 유동적 번역과 같은 맥락의 말 인데요, 과연 이 글을 쓴 사람은 무슨 의도를 갖고 작성했을지 생각해보며 번역 해야 합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;번역-사용자-타게팅&quot;&gt;번역 사용자 타게팅&lt;/h3&gt;
+&lt;p&gt;이 글을 읽는 독자들의 수준을 고려해서, 기술적 내용은 적당히 의역하거나, 전문가 집단이라면 그대로 쓸수도 있습니다&lt;/p&gt;
+
+&lt;h2 id=&quot;번역-방법&quot;&gt;번역 방법&lt;/h2&gt;
+&lt;p&gt;다시 본론으로 돌아가 방법론적 이야기를 해보겠습니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;번역가가-종종-저지르는-실수&quot;&gt;번역가가 종종 저지르는 실수&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;번역체&lt;/li&gt;
+  &lt;li&gt;오탈자&lt;/li&gt;
+  &lt;li&gt;기본적 맞춤법&lt;/li&gt;
+  &lt;li&gt;동의어 반복&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;팁&quot;&gt;팁&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;번역은 단어-단어 수준으로 정확하지 않아도 됨. 오역이 없고 번역투가 없는 문장이면 충분함. 다만, 번역시 누락이 일어나면 안됨.
+
+문장 끝(:)이나 문장 맨 앞 (...)같이 영어에서만 사용되는 문장 부호도 최대한 번역해야함.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/javascript-tutorial/ko.javascript.info/blob/master/CONTRIBUTING.md&quot;&gt;출처&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;번역-툴&quot;&gt;번역 툴&lt;/h3&gt;
+
+&lt;h4 id=&quot;cat&quot;&gt;CAT&lt;/h4&gt;
+&lt;p&gt;CAT(Computer-assisted translation) 툴을 사용하면 가장 좋지만, 작은 프로젝트의 경우 CAT의 사용이 오히려 cost를 증가 시킬수 있습니다.&lt;/p&gt;
+
+&lt;p&gt;작은 프로젝트의 경우 자주 사용되는 용어를 통일할수 있도록 하는 일이 필요한데요, 저의 경우 VSCode의 창 분할 기능으로 대신합니다.&lt;/p&gt;
+
+&lt;h4 id=&quot;맞춤법-검사&quot;&gt;맞춤법 검사&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&quot;http://speller.cs.pusan.ac.kr/&quot;&gt;맞춤법 검사기&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;용어-번역&quot;&gt;용어 번역&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.microsoft.com/en-us/language/Search&quot;&gt;마이크로 소프트 용어집&lt;/a&gt;
+&lt;a href=&quot;https://hangulize.org/&quot;&gt;한글라이즈&lt;/a&gt;
+&lt;a href=&quot;https://kornorms.korean.go.kr//example/exampleList.do&quot;&gt;국립국어원 한국어 어문 규범&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;번역-레퍼런스&quot;&gt;번역 레퍼런스&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/reactjs/ko.reactjs.org/wiki/Best-practices-for-translation&quot;&gt;React JS 번역 best practise&lt;/a&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ap 미적분 정리 (2)</title>
+   <link href="https://soulyi.io/2021/03/31/ap-calculus-2"/>
+   <updated>2021-03-31T00:00:00+00:00</updated>
+   <id>https://soulyi.io/2021/03/31/ap-calculus-2</id>
+   <content type="html">&lt;h1 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;word&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;뜻&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;specify&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;구체화&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;tolerance&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;오차&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;continuity&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;연속&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;algebra&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;대수&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;imply&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;성립하다&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;derivatives&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;미분계수, 도함수&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;기호-정리&quot;&gt;기호 정리&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;phrases&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;뜻&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;\(\forall\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;for all, for any&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;\(\exists\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;there exist&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;\(\owns\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;such that, so that&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;\(\mathbb{R}\)&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;real numbers&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;증명&quot;&gt;증명&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;귀류법 : 반례를 이용한, 간접 증명&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;임의의-실수에-0을-곱하면-0이다&quot;&gt;임의의 실수에 0을 곱하면 0이다&lt;/h2&gt;
+
+&lt;h3 id=&quot;증명-1&quot;&gt;증명&lt;/h3&gt;
+
+&lt;p&gt;조건 \(\forall m \in \mathbb{R}\) 일때,&lt;/p&gt;
+
+\[m \cdot 0 = m(0 + 0) = m \cdot 0 + m \cdot 0\]
+
+&lt;h2 id=&quot;0으로-나눌수-없다&quot;&gt;0으로 나눌수 없다&lt;/h2&gt;
+
+&lt;h3 id=&quot;증명-1&quot;&gt;증명 (1)&lt;/h3&gt;
+
+&lt;p&gt;귀류법을 사용해서&lt;/p&gt;
+
+&lt;p&gt;조건 \(\forall m \in \mathbb{R}\) 일때,&lt;/p&gt;
+
+\[\frac{b}{a} = \frac{b + a}{a} = \frac{b}{a} + 1\]
+
+\[\frac{b}{a} = k\]
+
+\[\frac{b}{a} + 1 = k\]
+
+&lt;p&gt;\(k \neq k\) 이므로 모순입니다&lt;/p&gt;
+
+&lt;h3 id=&quot;증명-2&quot;&gt;증명 (2)&lt;/h3&gt;
+
+\[1 \cdot 0 = 0\]
+
+\[2 \cdot 0 = 0\]
+
+\[3 \cdot 0 = 0\]
+
+\[...\]
+
+&lt;p&gt;0으로 나눌수 있다고 가정을 하면&lt;/p&gt;
+
+\[1 = \frac{0}{0}\]
+
+\[2 = \frac{0}{0}\]
+
+\[3 = \frac{0}{0}\]
+
+&lt;p&gt;\(1 \neq 2 \neq 3\) 이므로 모순입니다&lt;/p&gt;
+
+&lt;h1 id=&quot;varepsilon---delta-논법&quot;&gt;\(\varepsilon - \delta\) 논법&lt;/h1&gt;
+
+\[\displaystyle{\lim_{x \to c} f(x) = L}\]
+
+&lt;p&gt;을 증명하는 방법에 대해 이야기 해보겠습니다&lt;/p&gt;
+
+&lt;h2 id=&quot;기본-원리&quot;&gt;기본 원리&lt;/h2&gt;
+
+&lt;p&gt;극한의 엄밀한 정리를 위해서는 \(\displaystyle{\lim_{x \to c} f(x) = L}\) 이 \(c\)에 ‘충분히 가까운’ \(x\)를 선택했을때 \(f(x)\) 와 \(L\) 의 거리가 ‘선택한만큼 작은’ 값을 가져야합니다.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Thomas’ Calculus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;정의&quot;&gt;정의&lt;/h2&gt;
+
+&lt;p&gt;조건&lt;/p&gt;
+
+\[\forall \varepsilon &amp;gt; 0\]
+
+\[\owns \delta = \delta(\varepsilon) &amp;gt; 0\]
+
+&lt;p&gt;일때&lt;/p&gt;
+
+\[\left| x - c \right| &amp;lt; \delta \Longrightarrow \left| f(x) - c \right| &amp;lt; \varepsilon\]
+
+&lt;p&gt;입니다.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>내가 jekyll을 선택한 이유</title>
+   <link href="https://soulyi.io/2021/03/28/why-jekyll"/>
+   <updated>2021-03-28T00:00:00+00:00</updated>
+   <id>https://soulyi.io/2021/03/28/why-jekyll</id>
+   <content type="html">&lt;h1 id=&quot;많고-많은-블로그-플랫폼&quot;&gt;많고 많은 블로그 플랫폼&lt;/h1&gt;
+
+&lt;p&gt;블로그 플랫폼의 춘추 전국 시대라고 불릴정도로 수많은 플랫폼들이 나와있습니다.
+제가 대표적으로 고려한 플랫폼들만 해도,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;설치형 블로그&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;wordpress&lt;/li&gt;
+      &lt;li&gt;jekyll&lt;/li&gt;
+      &lt;li&gt;ghost&lt;/li&gt;
+      &lt;li&gt;next.js 기반 (vercel 등 사용)&lt;/li&gt;
+      &lt;li&gt;svelt 기반&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;서비스&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;velog&lt;/li&gt;
+      &lt;li&gt;brunch&lt;/li&gt;
+      &lt;li&gt;tistory&lt;/li&gt;
+      &lt;li&gt;naver blog&lt;/li&gt;
+      &lt;li&gt;medium&lt;/li&gt;
+      &lt;li&gt;steemit&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;…
+이렇게 너무나도 많은 플랫폼들 사이에서 jekyll을 고르게 된 이유를 알려드리겠습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;자율성&quot;&gt;자율성&lt;/h1&gt;
+
+&lt;p&gt;서비스로 제공되는 플랫폼들에 비해 자율적으로 디자인, 수정이 가능합니다. LaTex 문법을 위해 사용하는 MathJax나, 태그 추가를 위해 사용하는 jekyll-tags 플러그인등 다른 서비스형 플랫폼에서는 생각도 할수없는 자율성을 제공합니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;커뮤니티&quot;&gt;커뮤니티&lt;/h1&gt;
+
+&lt;p&gt;jekyll은 next.js만큼 멋지진 않지만, 수많은 사람들이 사용해왔고, 지금도 사용하고 있는 만큼 다른 플랫폼들과 비교해 엄청난 커뮤니티가 존재하고, 거의 모든 케이스에 대해 솔루션이 존재합니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;무료&quot;&gt;무료&lt;/h1&gt;
+
+&lt;p&gt;github에 호스팅하면 무료로 사용 가능합니다. 평생.&lt;/p&gt;
+
+&lt;h1 id=&quot;markdown&quot;&gt;Markdown!&lt;/h1&gt;
+
+&lt;p&gt;기본적으로 makrdown을 사용하기때문에 머리아픈 wysiwyg을 다룰 필요가 없습니다!&lt;/p&gt;
+
+&lt;h1 id=&quot;그럼에도-불구하고&quot;&gt;그럼에도 불구하고?&lt;/h1&gt;
+
+&lt;p&gt;next.js에서 제공하는 code splitting이나, SEO, i18n이 부럽고, jekyll 기본 documentation이 부실하다는게 아쉽지만, 충분히 사용자에 따라 보완할수 있다고 생각합니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;구조&quot;&gt;구조&lt;/h1&gt;
+
+&lt;div class=&quot;mermaid&quot;&gt;
+graph LR;
+    A[Github] --&amp;gt; B[Github Actions];
+    B --&amp;gt; C[jekyll-deploy-action];
+    C --&amp;gt; D[CloudFlare];
+            
+&lt;/div&gt;
+&lt;p&gt;Github Actions로 파일을 생성하고, Cloudflare를 사용해서 속도를 올리고 있습니다.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>ap 미적분 정리 (1)</title>
+   <link href="https://soulyi.io/2021/03/24/ap-calculus"/>
+   <updated>2021-03-24T00:00:00+00:00</updated>
+   <id>https://soulyi.io/2021/03/24/ap-calculus</id>
+   <content type="html">
+&lt;h1 id=&quot;용어-정리&quot;&gt;용어 정리&lt;/h1&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;word&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;뜻&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;calculus&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;미적분학&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;inequalities&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;부등식&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;limits&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;극한&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;continuity&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;연속&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;keenly&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;예민하게&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;tangent&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;접선&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;secant&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;할선&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;parabola&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;포물선&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;ellipse&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;타원&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;identity function&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;항등 함수&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;constant function&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;상수 함수&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;uni step function&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;단위 계단 함수 (가우스 함수)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;oscillation&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;진동&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;erratically&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;이상하게&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;bound&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;경계&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;theorem&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;정리&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;laws&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;법칙&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;common factors&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;공통 인자&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;denominator&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;분모&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;numerator&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;분자&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;interval&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;구간&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;precise&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;엄밀한&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;converse&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;역&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;inverse&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;이&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;logical equivalence&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;논리적 동치&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;contraposition&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;대우&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;disjuction&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;논리합&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;conjuction&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;논리곱&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;tautology&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;항진 명제&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;contradiction&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;모순 명제&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;integer&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;정수&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;assume&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;가정하다&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;even&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;짝수&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;odd&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;홀수&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;theorems&quot;&gt;Theorems&lt;/h1&gt;
+
+&lt;p&gt;\(\bigtriangleup{ABC}\) 의 결합 조건:&lt;/p&gt;
+
+&lt;p&gt;\(\overline{BC}\)가 가장 큰 변일때
+\(\overline{BC} &amp;lt; \overline{AB} + \overline{AC}\) 성립&lt;/p&gt;
+
+&lt;h2 id=&quot;triangle-inequalities-theorem&quot;&gt;Triangle inequalities theorem&lt;/h2&gt;
+
+&lt;p&gt;(1)
+\(-|a| \leq a \leq |a|\)&lt;/p&gt;
+
+&lt;p&gt;(2)
+\(|a+b| \leq |a| + |b|\)&lt;/p&gt;
+
+&lt;p&gt;(3)
+\(|a-b| \leq |a| + |b|\)&lt;/p&gt;
+
+&lt;p&gt;(4)
+\(||a|-|b|| \leq |a-b|\)&lt;/p&gt;
+
+&lt;h2 id=&quot;special-inequalities&quot;&gt;Special inequalities&lt;/h2&gt;
+
+&lt;p&gt;(1)
+\(-|\theta| \leq sin\theta \leq |\theta|\)&lt;/p&gt;
+
+&lt;p&gt;(2)
+\(-|\theta| \leq 1 - cos \theta \leq |\theta|\)&lt;/p&gt;
+
+&lt;h1 id=&quot;logic&quot;&gt;Logic&lt;/h1&gt;
+
+&lt;h2 id=&quot;logical-equivalence&quot;&gt;Logical equivalence&lt;/h2&gt;
+
+\[P\equiv{q}\]
+
+\[\sim(\sim p)\equiv{p}\]
+
+&lt;h2 id=&quot;disjunction&quot;&gt;Disjunction&lt;/h2&gt;
+
+&lt;p&gt;equivalent to ‘or’&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(p\)&lt;/td&gt;
+      &lt;td&gt;\(q\)&lt;/td&gt;
+      &lt;td&gt;\(p \lor q\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;T&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;T&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;conjuction&quot;&gt;Conjuction&lt;/h2&gt;
+
+&lt;p&gt;equivalent to ‘and’&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;\(p\)&lt;/td&gt;
+      &lt;td&gt;\(q\)&lt;/td&gt;
+      &lt;td&gt;\(p \wedge q\)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;T&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;T&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;T&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+      &lt;td&gt;F&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;de-morgans-laws&quot;&gt;De Morgan’s laws&lt;/h2&gt;
+
+\[\sim(p \wedge q) \equiv {\sim{p}\lor\sim{q}}\]
+
+\[\sim(p \lor q) \equiv \sim{p}\wedge \sim{q}\]
+</content>
+ </entry>
+ 
+ <entry>
+   <title>개인프로젝트 개발, 배포, 수익화까지</title>
+   <link href="https://soulyi.io/2021/03/14/deploying-products"/>
+   <updated>2021-03-14T00:00:00+00:00</updated>
+   <id>https://soulyi.io/2021/03/14/deploying-products</id>
+   <content type="html">&lt;p&gt;개인 프로젝트는 속도가 중요하지만, 제가 생각하기엔 더 중요하다고 생각하는점은 &lt;strong&gt;안정적 배포와 마케팅&lt;/strong&gt;입니다. 대부분의 사용자들은 처음 웹사이트/앱을 접했을때에 완벽한 모습을 보지 못하면 다시 기회를 주지 않거든요. 그래서 UX를 한층 올려주는 배포, 마케팅에 대해 말해보겠습니다.&lt;/p&gt;
+
+&lt;p&gt;이 글에서는 주로 웹관련 기술에 대해 이야기하지만, 앱 관련 내용도 있습니다.&lt;/p&gt;
+
+&lt;p&gt;아래 내용은 제 개인적생각들이지만, 개발자분들이 보고 참고하는 내용으로 삼아주시면 감사하겠습니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;프로젝트-소개&quot;&gt;프로젝트 소개&lt;/h1&gt;
+
+&lt;p&gt;우선 제가 만든 세가지 프로젝트에 대해 소개해드리겠습니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;chekly---자가진단-자동화&quot;&gt;chekly - 자가진단 자동화&lt;/h2&gt;
+
+&lt;p&gt;사용스택&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;jQuery + plainJS&lt;/li&gt;
+  &lt;li&gt;redis&lt;/li&gt;
+  &lt;li&gt;mariaDB&lt;/li&gt;
+  &lt;li&gt;AWS Lightsail&lt;/li&gt;
+  &lt;li&gt;Flask&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lill74/chekly_public&quot;&gt;Github: lill74/chekly_public&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;issue-finder---핵토버페스트-issue-찾기&quot;&gt;issue-finder - 핵토버페스트 issue 찾기&lt;/h2&gt;
+
+&lt;p&gt;사용스택&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;ReactJS&lt;/li&gt;
+  &lt;li&gt;MongoDB&lt;/li&gt;
+  &lt;li&gt;AWS Lightsail&lt;/li&gt;
+  &lt;li&gt;Flask&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lill74/issue-finder&quot;&gt;Github: lill74/issue-finder&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;primenet---대통령-임기-보기&quot;&gt;primeNet - 대통령 임기 보기&lt;/h2&gt;
+
+&lt;p&gt;사용스택&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;NextJS&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/lill74/primeNet&quot;&gt;Github: lill74/primeNet&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;개발&quot;&gt;개발&lt;/h1&gt;
+
+&lt;p&gt;제가 생각하기에 개발 과정에서 가장 중점으로 둬야할건, 개발자의 편의가 아니라, 내 아이디어를 중심으로 &lt;strong&gt;UX를 개선하는것이라고 생각합니다&lt;/strong&gt;. 많은 개발자들이 착각하는데, 더 좋은 기술 스택, 좋은 언어를 사용하는것보다 우선순위는 UX입니다.&lt;/p&gt;
+
+&lt;p&gt;UX는 디자인부터, 설계까지 모든 분야야로 아우를수 있는데 대표적인 레퍼런스로&lt;/p&gt;
+
+&lt;h3 id=&quot;디자인&quot;&gt;디자인&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://brunch.co.kr/@thinkaboutlove/262&quot;&gt;UI 폼 디자인의 모든 것(1부) - brunch&lt;/a&gt;
+&lt;a href=&quot;https://brunch.co.kr/@thinkaboutlove/267&quot;&gt;UI 폼 디자인의 모든 것(2부) - brunch&lt;/a&gt;
+&lt;a href=&quot;https://brunch.co.kr/@ebprux/205&quot;&gt;버튼 색상 적용 UX 가이드 - brunch&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;속도&quot;&gt;속도&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://ui.toast.com/fe-guide/ko_PERFORMANCE&quot;&gt;성능 최적화 - TOAST UI&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;위 내용들을 추천드립니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;설계&quot;&gt;설계&lt;/h3&gt;
+
+&lt;h4 id=&quot;보안&quot;&gt;보안&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTTPS 지원&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.privacy.go.kr/a3sc/per/inf/perInfStep01.do&quot;&gt;개인정보 처리 방침 생성기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;VPN을 이용해 SSH 사용하기&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;개인정보 처리 방침은 의무이지만, 이 내용을 생략하시는 분들이 많이 있습니다. 개인정보를 처리하는 프로젝트의 경우 개인정보 처리 방침, 개인정보 처리 담당자 연락처등의 내용을 넣는것을 추천드립니다. 사용자가 &lt;strong&gt;이 웹사이트를 믿어도 되나?&lt;/strong&gt; 를 결정하는데에 중요한 Factor로 작용하기도 합니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;배포&quot;&gt;배포&lt;/h1&gt;
+
+&lt;h2 id=&quot;클라우드&quot;&gt;클라우드&lt;/h2&gt;
+
+&lt;h3 id=&quot;aws-lightsail&quot;&gt;AWS Lightsail&lt;/h3&gt;
+
+&lt;p&gt;방화벽, SSH, 보안설정등 다양한 설정을 진행해야되서 배포 속도가 느리지만, 그럼에도 불구하고 개인 개발자가 개발하면서 사용하기 좋은 플랫폼이라고 생각합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;heroku&quot;&gt;Heroku&lt;/h3&gt;
+
+&lt;p&gt;AWS의 장점을 다 덮지만, 무료 티어는 너무 불편합니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;serverless&quot;&gt;Serverless&lt;/h3&gt;
+
+&lt;h2 id=&quot;정적-페이지-호스팅&quot;&gt;정적 페이지 호스팅&lt;/h2&gt;
+
+&lt;h3 id=&quot;vercel-netlify&quot;&gt;Vercel, netlify&lt;/h3&gt;
+
+&lt;p&gt;둘다 개인 개발자는 무료로 사용할수 있지만, UI나 트래픽 폭이 널널한 Vercel을 추천드립니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;github-pages&quot;&gt;Github pages&lt;/h3&gt;
+
+&lt;h1 id=&quot;홍보&quot;&gt;홍보&lt;/h1&gt;
+
+&lt;h3 id=&quot;랜딩페이지&quot;&gt;랜딩페이지&lt;/h3&gt;
+
+&lt;p&gt;랜딩페이지의 디자인도 유저가 웹사이트를 사용할지 생각하게 하는 중요한 Factor중 하나입니다. 홍보 URL을 생성할때는, 랜딩페이지로 직접 트래픽이 들어오게 하고, 그 랜딩페이지에서 서비스 페이지로 redirect하는 방식을 추천드립니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://mockuphone.com/&quot;&gt;휴대폰 목업 생성&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;구글에서 Landing page templets 를 검색해보세요.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;개발자-커뮤니티&quot;&gt;개발자 커뮤니티&lt;/h3&gt;
+
+&lt;p&gt;개발자 커뮤니티는 새로운 제품을 소개하기 가장 좋은 플랫폼중 하나입니다. 개발자라는 특성상 새로운 제품에 거부감이 덜하고, 온라인 활동을 많이 하는 사람들을 타게팅 할수 있습니다. 초기 홍보에 추천드립니다. 각 커뮤니티별 특성이 다르니 고려해서 홍보하는것을 추천드립니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://news.hada.io/&quot;&gt;GeekNews&lt;/a&gt;
+&lt;a href=&quot;https://www.facebook.com/groups/codingeverybody/&quot;&gt;생활코딩 - Facebook&lt;/a&gt;
+&lt;a href=&quot;https://www.facebook.com/groups/System.out.Coding/&quot;&gt;코딩이랑 무관합니다만, - Facebook&lt;/a&gt;
+&lt;a href=&quot;https://gall.dcinside.com/board/lists?id=programming&quot;&gt;프로그래밍 갤러리 - dcinside&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;공유-버튼&quot;&gt;공유 버튼&lt;/h3&gt;
+
+&lt;p&gt;개인적으로 생각하기에 요즘 누가 공유버튼을 쓰겠어? 라는 생각을 했지만 제 웹사이트들에서 들어오는 트래픽의 30%정도가 공유 버튼을 이용해서 들어오고 있었습니다. 꼭 다는것을 추천 드립니다.&lt;/p&gt;
+
+&lt;h3 id=&quot;seo-등록-최적화&quot;&gt;SEO 등록, 최적화&lt;/h3&gt;
+
+&lt;h3 id=&quot;og-tag-썸네일-favicon&quot;&gt;OG Tag, 썸네일, Favicon&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.facebook.com/tools/debug/&quot;&gt;페이스북 공유 디버거&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;모니터링&quot;&gt;모니터링&lt;/h1&gt;
+
+&lt;p&gt;사실상 DevOps가 하는 일과 비슷합니다.
+&lt;a href=&quot;https://www.ridicorp.com/story/monitoring-howto/&quot;&gt;DevOps 팀을 위한 모니터링 팁 - RIDI&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sentry&quot;&gt;Sentry&lt;/h2&gt;
+
+&lt;p&gt;redis, flask등 에러 로그 관리를 도와줍니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;uptime-robot&quot;&gt;Uptime Robot&lt;/h2&gt;
+
+&lt;p&gt;유저들이 링크를 눌렀을때 반응하지 않는것만큼 싫어하는 일은 없을겁니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;crontior&quot;&gt;&lt;a href=&quot;https://cronitor.io/&quot;&gt;Crontior&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Cron job을 실행하고, 실패시 Notifcation을 제공하는 프로그램입니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;사후-보고&quot;&gt;사후 보고&lt;/h1&gt;
+
+&lt;h2 id=&quot;analytics&quot;&gt;Analytics&lt;/h2&gt;
+
+&lt;h3 id=&quot;google-analytics&quot;&gt;Google Analytics&lt;/h3&gt;
+
+&lt;h3 id=&quot;facebook-analytics&quot;&gt;Facebook Analytics&lt;/h3&gt;
+
+&lt;h3 id=&quot;gif-사용&quot;&gt;GIF 사용&lt;/h3&gt;
+
+&lt;p&gt;랜딩페이지에 GIF영상을 넣으면&lt;/p&gt;
+
+&lt;h1 id=&quot;수익화&quot;&gt;수익화&lt;/h1&gt;
+
+&lt;h2 id=&quot;google-adsense-admob&quot;&gt;Google Adsense, Admob&lt;/h2&gt;
+
+&lt;p&gt;한국에서 가장 광고 단가가 높은 편이지만, 해외 트래픽에 대한 광고 단가가 정말 높습니다. 하지만 요즘 대부분의 사용자가 광고 차단 플러그인을 사용해서 트래픽에 비해 광고 수익은 정말 적습니다, 그와 반대로 Admob은 트래픽만큼 들어옵니다.&lt;/p&gt;
+
+&lt;h2 id=&quot;기타-광고-플랫폼&quot;&gt;기타 광고 플랫폼&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kakao Adfit (한국)&lt;/li&gt;
+  &lt;li&gt;dable (한국)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;후원-플랫폼&quot;&gt;후원 플랫폼&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Twip (한국)&lt;/li&gt;
+  &lt;li&gt;Paypal&lt;/li&gt;
+  &lt;li&gt;Buy me a coffe&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;앱-vs-웹-특징&quot;&gt;앱 vs 웹 특징&lt;/h1&gt;
+
+&lt;p&gt;웹은 초기 홍보가 가장 중요합니다. 그에 반해 앱은 플레이 스토어, 앱스토어라는 플랫폼에 종속 되어있어서 제목, 태그, 설명등의 설정이 중요합니다.&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>나만의 코딩테스트 준비 방법</title>
+   <link href="https://soulyi.io/2021/02/28/coding-test"/>
+   <updated>2021-02-28T00:00:00+00:00</updated>
+   <id>https://soulyi.io/2021/02/28/coding-test</id>
+   <content type="html">&lt;p&gt;알고리즘 공부를 하다보면 막막합니다. 대체 뭘 풀어야 할지 잘 모르겠고,
+그럴때마다 제가본 자료들을 공유해보고싶습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://covenant.tistory.com/220&quot;&gt;취업을 위한 코딩테스트 공부방법&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;우선 저 글을 읽으며 거시적인 길을 잡고&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://solved.ac&quot;&gt;solved.ac&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;solved.ac에 가입해서 문제 - Class 에 있는 Class별 문제를 풀어봅니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://plzrun.tistory.com/entry/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4PS-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0&quot;&gt;알고리즘 문제풀이(PS) 시작하기&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;그리고 이 글을 읽어보면서 문제를 풀어봅니다. (이 아래에 있는 링크들은 plzrun님의 문제들을 모아서 만든 문제집입니다.)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.acmicpc.net/workbook/view/7213&quot;&gt;입출력&lt;/a&gt;
+&lt;a href=&quot;https://www.acmicpc.net/workbook/view/7214&quot;&gt;DP&lt;/a&gt;
+&lt;a href=&quot;https://www.acmicpc.net/workbook/view/7215&quot;&gt;이런 저런 문제들&lt;/a&gt;
+&lt;a href=&quot;https://www.acmicpc.net/workbook/view/7216&quot;&gt;그래프&lt;/a&gt;
+&lt;a href=&quot;https://www.acmicpc.net/workbook/view/7217&quot;&gt;이분탐색/삼분탐색&lt;/a&gt;
+&lt;a href=&quot;https://www.acmicpc.net/workbook/view/7218&quot;&gt;분할정복&lt;/a&gt;
+&lt;a href=&quot;https://www.acmicpc.net/workbook/view/7219&quot;&gt;그리디&lt;/a&gt;
+&lt;a href=&quot;https://www.acmicpc.net/workbook/view/7220&quot;&gt;완전탐색&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;문제들을 풀면서 갓동빈님의 실전 알고리즘 강의도 틈틈히 듣습니다.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=qQ5iLNjpxSk&amp;amp;list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&quot;&gt;실전 알고리즘&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;이정도면 재미있게 알고리즘 공부를 해볼수 있을것 같습니다.&lt;/p&gt;
+</content>
+ </entry>
+ 
+
+</feed>
